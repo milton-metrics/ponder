@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+// TODO: Add Linkedin domain here.
+const nextConfig = {
+  images: {
+    domains: ["lh3.googleusercontent.com"]
+  }
+}
 
 module.exports = nextConfig
