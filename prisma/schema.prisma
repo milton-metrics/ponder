@@ -1,6 +1,13 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+// Options - 
+// View Studio 
+// npx prisma studio
+
+// Push Database changes to prisma 
+// npx prisma db push
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -81,9 +88,9 @@ model Question {
   question          String
   answer            String
   gameId            String
-  options           Json? // for mcq questions
+  options           Json? // for multiple_choice questions
   percentageCorrect Float? // for open_ended questions
-  isCorrect         Boolean? // for mcq questions
+  isCorrect         Boolean? // for multiple_choice questions
   questionType      GameType
   userAnswer        String?
 
